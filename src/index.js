@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { RouterProvider } from 'react-router-dom'; // Importe o RouterProvider
+import { router } from './routes'; // Importe nosso objeto de rotas
+import { AuthProvider } from './store/contexts/AuthContext'; // Importe o provedor de autenticação
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    {/* O AuthProvider deve envolver o RouterProvider para que as rotas tenham acesso ao contexto */}
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  </React.StrictMode>,
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
