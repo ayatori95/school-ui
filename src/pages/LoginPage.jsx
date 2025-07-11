@@ -1,3 +1,8 @@
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../store/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { authService } from '../store/contexts/authService'; // Ajuste o caminho conforme necessário
+
 export const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

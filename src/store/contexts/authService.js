@@ -1,4 +1,4 @@
-import apiClient from './api';
+import apiClient from '../../services/api'; // Importa o cliente Axios configurado
 
 export const authService = {
   /**

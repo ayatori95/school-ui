@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import { RouterProvider } from 'react-router-dom'; // Importe o RouterProvider
 import { router } from './routes'; // Importe nosso objeto de rotas
 import { AuthProvider } from './store/contexts/AuthContext'; // Importe o provedor de autenticação

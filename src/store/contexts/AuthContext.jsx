@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
-import { authService } from '../../services/authService'; // Ajuste o caminho
+import { authService } from './authService'; // Ajuste o caminho
 
 // Cria o contexto
 export const AuthContext = createContext(null);
@@ -10,7 +10,7 @@ export const useAuth = () => {
 }
 // Cria o Provedor do Contexto
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = = useState(null);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true); // Essencial para a verificação inicial
   const [error, setError] = useState(null);
 

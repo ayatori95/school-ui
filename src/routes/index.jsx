@@ -1,12 +1,11 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import App from '../App'; // Nosso Layout Principal
-import LoginPage from '../pages/LoginPage';
-import StudentDashboard from '../pages/StudentDashboard';
-import TeacherDashboard from '../pages/TeacherDashboard';
+import { LoginPage } from '../pages/LoginPage'; // Página de Login
+import { StudentDashboard } from '../pages/StudentDashboard'; // Dashboard do Aluno
+import { TeacherDashboard } from '../pages/TeacherDashboard'; // Dashboard do Professor
 import NotFoundPage from '../pages/NotFoundPage';
 import ProtectedRoute from './ProtectedRoute';
 import HomeRedirect from './HomeRedirect';
-
 export const router = createBrowserRouter([
   {
     path: '/',
